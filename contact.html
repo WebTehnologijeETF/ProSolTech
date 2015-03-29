@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link href="ProSolTech.css" rel ="stylesheet"/>
+    <title>Padajuci Header Efekat</title>
+</head>
+<body>
+
+<div id = "container">
+    <header>
+        <a href ="index.html"> <img id="Logo" src="PSTLogo.png" alt="ProSolTech Logo"></a>
+        <ul id =lista_headera>
+
+            <li class = "lista_u_headeru"><a href="index.html">NASLOVNA</a></li> <!-- ovo treba odraditi tj povezati linkove kasnije na moje stranice -->
+            <li class = "lista_u_headeru"><a href="about_us.html">O NAMA</a></li>
+            <li class = "lista_u_headeru"><a href="news.html">NOVOSTI</a></li>
+            <li class = "lista_u_headeru"><a href="catalogue.html">KATALOG</a></li>
+            <li class = "lista_u_headeru"><a href="contact.html">KONTAKT</a></li>
+
+        </ul>
+        <div id="header_Underline"></div>
+    </header>
+</div>
+<main>
+    <div id="banner">
+        <img src="img/Call_centre.jpg" alt="Contact banner" >
+    </div>
+
+    <div id="content_upperline"></div>
+
+    <div id="content" >
+
+        <div id="youtube_video">
+            <iframe width="600" height="375" src="https://www.youtube.com/embed/hAjzvy94JsM" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div id="video_more">
+            <details >
+                <summary>Details</summary>
+                <p> Clip from the movie "Big Nothing". Two guys working in a call center. The movie is called "Big Nothing".</p>
+                <p>It stars David Schwimmer and Simon Pegg. Check it out at <a href="http://www.imdb.com/title/tt0488085/"> http://www.imdb.com/title/tt0488085/</a> </p>
+            </details>
+        </div>
+
+        <div id="audio">
+            <audio controls>
+                <source src="audio.mp3" type="audio/mpeg">
+             </audio>
+        </div>
+
+        <div id="Lcations">
+            <div id="Location_1">
+                <p> Location : Sarajevo</p>
+                <p> Phone number : 033/231-441</p>
+                <p> Fax : 033/231-442</p>
+                <p> E-mail : prosoltech@info.ba</p>
+            </div>
+            <div id="Location_2">
+                <p> Location : Zenica </p>
+                <p> Phone number : 033/231-441</p>
+                <p> Fax : 033/ 231-442</p>
+                <p> E-mail : prosoltech@info.ba</p>
+            </div>
+        </div>
+        <form id="contact_form" action="contact.php" method="post">
+            Your name<br>
+            <input id="input_name" type="text" name="cf_name"><br>
+            Your e-mail<br>
+            <input id="input_email"type="email" name="cf_email"><br>
+            Message<br>
+            <textarea id="text_area" name="cf_message"></textarea><br>
+                <input id="button_input" type="submit" value="Send">
+                <input id="button_clear" type="reset" value="Clear">
+        </form>
+    </div>
+
+
+    <div id="bottom_upperline"></div>
+    <div id="bottom">
+
+        <div id="facebook">
+            <img src = "img/facebook_ico.png" alt="Facebook Logo" >
+        </div>
+        <div id="twitter">
+            <img src = "img/twitter_ico.png" alt="Twitter Logo">
+        </div>
+    </div>
+    <div id="bottom_underline"></div>
+
+</main>
+
+<footer id="Copy">
+    Copyright &copy; Edin Strojil 2014/2015.
+</footer>
+
+</body>
+</html>
