@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <link href="ProSolTech.css" rel ="stylesheet"/>
     <title>Padajuci Header Efekat</title>
+    <script  src = "JavaScript/countries.js"></script>
+    <script src="JavaScript/menu.js"></script>
+
 </head>
 <body>
 
@@ -15,7 +18,14 @@
             <li class = "lista_u_headeru"><a href="index.html">NASLOVNA</a></li> <!-- ovo treba odraditi tj povezati linkove kasnije na moje stranice -->
             <li class = "lista_u_headeru"><a href="about_us.html">O NAMA</a></li>
             <li class = "lista_u_headeru"><a href="news.html">NOVOSTI</a></li>
-            <li class = "lista_u_headeru"><a href="catalogue.html">KATALOG</a></li>
+            <li id="meni" class = "lista_u_headeru" onmouseover="showMenu()" onmouseout="hideMenu()" ><a href="catalogue.html"  >KATALOG</a>
+                <ul id = "katalog_podmeni">
+                    <li class = "test"><a href="index.html">Godina 2009</a> </li>
+                    <li class = "test"><a href="index.html">Godina 2010</a> </li>
+                    <li class = "test"><a href="index.html">Godina 2011</a></li>
+                    <li class = "test"><a href="index.html">Godina 2012</a></li>
+                </ul>
+            </li>
             <li class = "lista_u_headeru"><a href="contact.html">KONTAKT</a></li>
 
         </ul>
@@ -32,7 +42,7 @@
     <div id="content" >
 
         <div id="youtube_video">
-            <iframe width="600" height="375" src="https://www.youtube.com/embed/hAjzvy94JsM" frameborder="0" allowfullscreen></iframe>
+            <iframe width="475" height="300" src="https://www.youtube.com/embed/hAjzvy94JsM" frameborder="0" allowfullscreen></iframe>
         </div>
         <div id="video_more">
             <details >
@@ -62,15 +72,33 @@
                 <p> E-mail : prosoltech@info.ba</p>
             </div>
         </div>
-        <form id="contact_form" action="contact.php" method="post">
+        <form name="kontakt_forma" id="contact_form" action="contact.php"  method="post" >
             Your name<br>
-            <input id="input_name" type="text" name="cf_name"><br>
+                <input id="input_name" type="text" name="cf_name">
+                    <img id="checked" src="img/check_icon.png">
+                    <img id="unchecked" src="img/red-x.png">
+                <span id="ime_error" ></span><br>
+
+            Select Country (with states):   <select id="country" name ="country"></select>
+            Select State: <select name ="state" id ="state"></select>
+                    <script language="javascript">
+                        populateCountries("country", "state");
+                    </script>
+
             Your e-mail<br>
-            <input id="input_email"type="email" name="cf_email"><br>
+                <input id="input_email"type="email" name="cf_email">
+                <img id="checked2" src="img/check_icon.png">
+                <img id="unchecked2" src="img/red-x.png">
+                <span id="mail_error"></span><br>
+
             Message<br>
-            <textarea id="text_area" name="cf_message"></textarea><br>
-                <input id="button_input" type="submit" value="Send">
-                <input id="button_clear" type="reset" value="Clear">
+                <img id="checked3" src="img/check_icon.png">
+                <img id="unchecked3" src="img/red-x.png">
+                <textarea id="message_text_area" name="cf_message"></textarea>
+                <span id="message_error"></span><br>
+
+                    <input id="button_input" onclick ="validateForm()"type="button" value="Send">
+                    <input id="button_clear" type="reset" value="Clear">
         </form>
     </div>
 
@@ -92,6 +120,6 @@
 <footer id="Copy">
     Copyright &copy; Edin Strojil 2014/2015.
 </footer>
-
+<script src = "JavaScript/validateForm.js"></script>
 </body>
 </html>

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <link href="ProSolTech.css" rel ="stylesheet"/>
     <title>Padajuci Header Efekat</title>
+    <script src="JavaScript/menu.js"></script>
 </head>
     <body>
 
@@ -15,7 +16,14 @@
                     <li class = "lista_u_headeru"><a href="index.html">NASLOVNA</a></li> <!-- ovo treba odraditi tj povezati linkove kasnije na moje stranice -->
                     <li class = "lista_u_headeru"><a href="about_us.html">O NAMA</a></li>
                     <li class = "lista_u_headeru"><a href="news.html">NOVOSTI</a></li>
-                    <li class = "lista_u_headeru"><a href="catalogue.html">KATALOG</a></li>
+                    <li id="meni" class = "lista_u_headeru" onmouseover="showMenu()" onmouseout="hideMenu()" ><a href="catalogue.html"  >KATALOG</a>
+                        <ul id = "katalog_podmeni">
+                            <li class = "test"><a href="index.html">Godina 2009</a> </li>
+                            <li class = "test"><a href="index.html">Godina 2010</a> </li>
+                            <li class = "test"><a href="index.html">Godina 2011</a></li>
+                            <li class = "test"><a href="index.html">Godina 2012</a></li>
+                        </ul>
+                    </li>
                     <li class = "lista_u_headeru"><a href="contact.html">KONTAKT</a></li>
 
                 </ul>

@@ -108,7 +108,7 @@ ul#lista_headera{
 header > ul > li >  a {
     display: block;
     width: 100px;
-    height: 31px;
+    height: 32px;
     text-decoration: none;
     color:dodgerblue;
 
@@ -126,6 +126,7 @@ li.lista_u_headeru {
     display: inline;
     border-top: 4px solid dodgerblue;
     text-align: center;
+    height: 37px;
 
 }
 ul#lista_headera{
@@ -205,8 +206,8 @@ div#Location_2{
 }
 #youtube_video{
     padding:10px;
-    width:600px;
-    height:375px;
+    width:475px;
+    height:300px;
     margin-left:auto;
     margin-right:auto
 }
@@ -230,7 +231,7 @@ div#Location_2{
     width:400px;
     height:30px;
 }
-#text_area{
+#message_text_area{
     width:400px;
     height:150px;
 }
@@ -303,4 +304,108 @@ div#firme_saradnice {
     font-size: 30px;
     list-style-image: url("http://www.autoliv.com/Style%20Library/Autoliv/Images/icon-red-bg-white-arrow-small.png");
 }
+/*----------------------------------------------CSS Za validaciju kontakt forme-----------------------------------*/
+#ime_error {
 
+    background-color: red;
+    color: white;
+    display: none;
+    width: 402px;
+    position: relative;
+    left: 420px;
+    top:-40px;
+}
+#mail_error {
+    background-color: red;
+    color: white;
+    display: none;
+    width: 402px;
+    position: relative;
+    left: 420px;
+    top:-40px;
+}
+#message_error {
+    background-color: red;
+    color: white;
+    display: none;
+    width: 402px;
+    position: relative;
+    left: 420px;
+    top:-160px;
+}
+img#checked {
+     display:none;
+     float:right;
+ }
+img#unchecked{
+    display: none;
+    float:right;
+}
+img#checked2 {
+    display:none;
+    float:right;
+
+}
+img#unchecked2{
+    display: none;
+    float:right;
+
+}
+img#checked3 {
+    display:none;
+    float:right;
+
+}
+img#unchecked3{
+    display: none;
+    float:right;
+}
+#state {
+    height :31px;
+
+}
+#country {
+    height:31px;
+}
+/*-------------------------------------------------------------------------------------------------------------------*/
+
+#katalog_podmeni{
+
+    display: none;
+    border: solid dodgerblue 3px;
+
+}
+#katalog_podmeni > li {
+
+
+    background-color: whitesmoke;
+    list-style-type: none;
+    display: block;
+
+}
+#katalog_podmeni > li :hover {
+
+    background-color: dodgerblue;
+    color:whitesmoke;
+    list-style-type: none;
+    display: block;
+}
+#katalog_podmeni > li> a {
+
+    padding-top:10px;
+    height:32px;
+    display: block;
+    text-decoration:none;
+    color:dodgerblue;
+
+}
+#katalog_podmeni > li> a :hover {
+
+    display: block;
+    text-decoration:none;
+    color: white;
+
+}
+
+
+ /*-------------------------------------------------------------------------------------------------------------------*/
