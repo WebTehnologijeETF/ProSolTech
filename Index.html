@@ -10,21 +10,22 @@
 
 <div id = "container">
     <header>
-        <a href ="index.html"> <img id="Logo" src="PSTLogo.png" alt="ProSolTech Logo"></a>
+        <a onclick ="otvori_stranicu('index.html')"> <img id="Logo" src="PSTLogo.png" alt="ProSolTech Logo"></a>
         <ul id =lista_headera>
 
-            <li class = "lista_u_headeru"><a href="index.html">NASLOVNA</a></li> <!-- ovo treba odraditi tj povezati linkove kasnije na moje stranice -->
-            <li class = "lista_u_headeru"><a href="about_us.html">O NAMA</a></li>
-            <li class = "lista_u_headeru"><a href="news.html">NOVOSTI</a></li>
-            <li id="meni" class = "lista_u_headeru" onmouseover="showMenu()" onmouseout="hideMenu()" ><a href="catalogue.html"  >KATALOG</a>
+            <li class = "lista_u_headeru"><a onclick ="otvori_stranicu('index.html')">NASLOVNA</a></li> <!-- ovo treba odraditi tj povezati linkove kasnije na moje stranice -->
+            <li class = "lista_u_headeru"><a onclick =" otvori_stranicu('about_us.html')">O NAMA</a></li>
+            <li class = "lista_u_headeru"><a onclick ="otvori_stranicu('news.html')" >NOVOSTI</a></li>
+            <li id="meni" class = "lista_u_headeru" onmouseover="showMenu()" onmouseout="hideMenu()" ><a onclick ="otvori_stranicu('catalogue.html')">KATALOG</a>
                 <ul id = "katalog_podmeni">
-                    <li class = "test"><a href="index.html">Godina 2009</a> </li>
-                    <li class = "test"><a href="index.html">Godina 2010</a> </li>
-                    <li class = "test"><a href="index.html">Godina 2011</a></li>
-                    <li class = "test"><a href="index.html">Godina 2012</a></li>
+                    <li class = "test"><a onclick ="otvori_stranicu('index.html')">Godina 2009</a> </li>
+                    <li class = "test"><a onclick ="otvori_stranicu('index.html')">Godina 2010</a> </li>
+                    <li class = "test"><a onclick ="otvori_stranicu('index.html')">Godina 2011</a></li>
+                    <li class = "test"><a onclick ="otvori_stranicu('index.html')">Godina 2012</a></li>
+                    <li class= "test"><a onclick ="otvori_stranicu('noviKatalog.html')">novi item</a></li>
                 </ul>
             </li>
-            <li class = "lista_u_headeru"><a href="contact.html">KONTAKT</a></li>
+            <li class = "lista_u_headeru"><a onclick ="otvori_stranicu('contact.html')">KONTAKT</a></li>
 
         </ul>
         <div id="header_Underline"></div>
@@ -62,6 +63,7 @@
     <footer id="Copy">
         Copyright &copy; Edin Strojil 2014/2015.
     </footer>
+    <script src="JavaScript/otvaranjePodstranice.js"></script>
 </div>
 </body>
 </html>

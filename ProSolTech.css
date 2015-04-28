@@ -34,7 +34,7 @@ div#content {
     position: relative;
     top:500px;
     background-color:dodgerblue;
-    height:1300px;
+    height:1400px;
     color:white;
 
 
@@ -184,7 +184,7 @@ div#twitter > img {
     width:64px;
 
 }
-/*--------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------*/
 div#content_upperline{
     position:relative;
     top:500px;
@@ -224,30 +224,38 @@ div#Location_2{
 }
 #input_name{
     width:400px;
-    height:30px;
+    height:25px;
+}
+#input_city{
+    height:25px;
+    width:400px;
+}
+#input_zipcode{
+    height:25px;
+    width:400px;
 }
 #input_email{
 
     width:400px;
-    height:30px;
+    height:25px;
 }
 #message_text_area{
     width:400px;
-    height:150px;
+    height:130px;
 }
 #button_input{
-    height:30px;
+    height:25px;
     width:80px;
-    background-color: dodgerblue;
-    color:white;
+    background-color: whitesmoke;
+    color:dodgerblue;
 }
 
 #button_clear{
 
-    height:30px;
+    height:25px;
     width:80px;
-    background-color: dodgerblue;
-    color:white;
+    background-color: whitesmoke;
+    color:dodgerblue;
 }
 
 div#video_more{
@@ -261,9 +269,10 @@ div#video_more{
 div#audio{
     padding:10px;
     width:300px;
-    height:50px;
+    height:30px;
     margin-right:auto;
     margin-left: auto;
+
 }
 
 table, th, td {
@@ -305,33 +314,54 @@ div#firme_saradnice {
     list-style-image: url("http://www.autoliv.com/Style%20Library/Autoliv/Images/icon-red-bg-white-arrow-small.png");
 }
 /*----------------------------------------------CSS Za validaciju kontakt forme-----------------------------------*/
+/* napomena za sebe kasnije staviti na static ovo da se lijepo poslozi ispod inputa*/
+
 #ime_error {
 
     background-color: red;
     color: white;
     display: none;
     width: 402px;
-    position: relative;
-    left: 420px;
-    top:-40px;
+    position:static;
+    left: 1170px;
+    top:650px;
+    font-size: 18px;
+    height:20px;
 }
 #mail_error {
     background-color: red;
     color: white;
     display: none;
     width: 402px;
-    position: relative;
-    left: 420px;
-    top:-40px;
+    position:static;
+    left: 1170px;
+    top:800px;
+    font-size: 18px;
+    height:20px;
+}
+#zipcode_error{
+
+    background-color: red;
+    color: white;
+    display: none;
+    width: 402px;
+    position:static;
+    left: 1170px;
+    top:750px;
+    font-size: 18px;
+    height:40px;
+
 }
 #message_error {
     background-color: red;
     color: white;
     display: none;
     width: 402px;
-    position: relative;
-    left: 420px;
-    top:-160px;
+    position: static;
+    left:1170px;
+    top:850px;
+    font-size: 18px;
+    height:20px;
 }
 img#checked {
      display:none;
@@ -360,19 +390,32 @@ img#unchecked3{
     display: none;
     float:right;
 }
+img#checked4 {
+    display:none;
+    float:right;
+
+}
+img#unchecked4{
+    display: none;
+    float:right;
+}
 #state {
-    height :31px;
+    height :25px;
 
 }
 #country {
-    height:31px;
+    height:25px;
+    width:150px;
 }
+
 /*-------------------------------------------------------------------------------------------------------------------*/
 
 #katalog_podmeni{
-
+    z-index:11;
     display: none;
-    border: solid dodgerblue 3px;
+    border: solid dodgerblue 4px;
+    position:relative;
+    top:-1px;
 
 }
 #katalog_podmeni > li {
@@ -409,3 +452,43 @@ img#unchecked3{
 
 
  /*-------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------Unos itema u katalog css----------------------------------------------------*/
+
+#item_form{
+    padding:10px;
+    font-size: 20px;
+    width:420px;
+    height:430px;
+    top: 40px;
+    margin-left:auto;
+    margin-right:auto;
+
+}
+#input_item_name{
+    width:400px;
+    height:25px;
+}
+#input_item_description{
+    width:400px;
+    height:25px;
+ }
+#input_image{
+    width:400px;
+    height:25px;
+}
+#input_URL{
+    width:400px;
+    height:25px;
+}
+#input_availability{
+    width:400px;
+    height:25px;
+}
+#input_quantity{
+    width:400px;
+    height:25px;
+}
+#input_price{
+    width:400px;
+    height:25px;
+}

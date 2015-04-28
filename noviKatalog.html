@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link href="ProSolTech.css" rel ="stylesheet"/>
+    <title>Padajuci Header Efekat</title>
+
+</head>
+<body>
+
+<div id = "container">
+    <header>
+        <a onclick ="otvori_stranicu('index.html')"> <img id="Logo" src="PSTLogo.png" alt="ProSolTech Logo"></a>
+        <ul id =lista_headera>
+
+            <li class = "lista_u_headeru"><a onclick ="otvori_stranicu('index.html')">NASLOVNA</a></li> <!-- ovo treba odraditi tj povezati linkove kasnije na moje stranice -->
+            <li class = "lista_u_headeru"><a onclick ="otvori_stranicu('about_us.html')">O NAMA</a></li>
+            <li class = "lista_u_headeru"><a onclick ="otvori_stranicu('news.html')" >NOVOSTI</a></li>
+            <li id="meni" class = "lista_u_headeru" onmouseover="showMenu()" onmouseout="hideMenu()" ><a onclick ="otvori_stranicu('catalogue.html')">KATALOG</a>
+                <ul id = "katalog_podmeni">
+                    <li class = "test"><a onclick ="otvori_stranicu('index.html')">Godina 2009</a> </li>
+                    <li class = "test"><a onclick ="otvori_stranicu('index.html')">Godina 2010</a> </li>
+                    <li class = "test"><a onclick ="otvori_stranicu('index.html')">Godina 2011</a></li>
+                    <li class = "test"><a onclick ="otvori_stranicu('index.html')">Godina 2012</a></li>
+                    <li class= "test"><a onclick ="otvori_stranicu('noviKatalog.html')">novi item</a></li>
+                </ul>
+            </li>
+            <li class = "lista_u_headeru"><a onclick ="otvori_stranicu('contact.html')">KONTAKT</a></li>
+
+        </ul>
+        <div id="header_Underline"></div>
+    </header>
+</div>
+<main>
+    <div id="banner">
+        <img src="images/Catalogue.jpg" alt="Catalogue banner" >
+    </div>
+
+    <div id="content_upperline"></div>
+
+    <div id="content" >
+
+
+        <form  id="item_form"  name="item_entry" action="items.php"  method="post" >
+
+            Naziv<br>
+                <input id="input_item_name" type="text" name="if_name" placeholder="Ime proizvoda">
+                <span id="item_error" ></span><br>
+            Opis:<br>
+                <input id="input_item_description" type="text" name="if_description" placeholder="opis proizvoda">
+                <span id="description_error" ></span><br>
+
+            Input image:<br>
+                <input id="input_image" type="text" name="if_image" placeholder="URL slike">
+                <span id="input_image_error"></span><br>
+
+            Input URL:<br>
+                <input id="input_URL" type="text" name="if_URL" placeholder="Unesi URL slike">
+                <span id="URL_error"></span><br>
+
+
+            Dostupnost:<br>
+                <input id="input_availability" type="checkbox" name="if_availability" >
+                <span id="availability_error"></span><br>
+            Kolicina:<br>
+
+                <input id="input_quantity" type="number" name="if_quantity" >
+                <span id="quantity_error"></span><br>
+            Price:<br>
+                <input id="input_price" type="text" name="if_price" placeholder="Unesi cijenu">
+                <span id="price_error"></span><br>
+
+            <input id="button_input" onclick ="validateForm()" type="button" value="Send" >
+            <input id="button_clear" onclick ="formReset()" type="reset" value="Clear">
+        </form>
+
+
+
+    </div>
+
+    <div id="bottom_upperline"></div>
+    <div id="bottom">
+
+        <div id="facebook">
+            <img src = "images/facebook_ico.png" alt="Facebook Logo" >
+        </div>
+        <div id="twitter">
+            <img src = "images/twitter_ico.png" alt="Twitter Logo">
+        </div>
+    </div>
+
+    <div id="bottom_underline"></div>
+
+</main>
+
+<footer id="Copy">
+    Copyright &copy; Edin Strojil 2014/2015.
+</footer>
+    <script src="JavaScript/menu.js"></script>
+    <script src="JavaScript/otvaranjePodstranice.js"></script>
+   <!-- <script src="JavaScript/unesiUBazu.js"></script> -->
+</body>
+</html>

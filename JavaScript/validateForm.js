@@ -2,6 +2,8 @@ var validirano = false;
 var validacija_emaila =false;
 var validacija_imena =false;
 
+//onblur dodati kasnije na svako poyivanje u htmlu a to radimo tako sto cemo raydvojiti sve metode za validaciju i poyivati ih u glavnoj validateForm funkciji
+
 function validateForm(){
 
       validirano = true;
@@ -17,6 +19,8 @@ function validateForm(){
     document.getElementById('checked2').style.display= "none";
     document.getElementById('unchecked3').style.display= "none";
     document.getElementById('checked3').style.display= "none";
+    document.getElementById('unchecked4').style.display= "none";
+    document.getElementById('checked4').style.display= "none";
 
         if(name.value.length == 0) {
 
@@ -82,7 +86,7 @@ function validateForm(){
     if(validacija_emaila == true && validacija_imena){
 
         var message = document.getElementById('message_text_area');
-        var message_error =document.getElementById('message_error');
+        var message_error = document.getElementById('message_error');
         message.disabled=false;
 
         if(message.value.length == 0 ){
@@ -100,6 +104,7 @@ function validateForm(){
         }
     }
     else{
+
         var message = document.getElementById('message_text_area');
         var message_error =document.getElementById('message_error');
 
@@ -108,13 +113,26 @@ function validateForm(){
         message.style.backgroundColor = "red";
         message_error.style.display = "block";
         document.getElementById('unchecked3').style.display= "block";
-        message_error.innerHTML = "Za slanje poruke morate ispuniti ime/email pravilno !";
+        message_error.innerHTML = "Za unos poruke ispunite ime/email pravilno!";
     }
 
     /*------------------------------------------------------------------------------------------------------------------*/
+
+    /*-------------------------------testiranje grada i postanskog broja-----------------------------------------------*/
+    var grad = document.getElementById('state').value;
+    var zipcode = document.getElementById('input_zipcode').value;
+
+       if(ProvjeriGrad(grad,zipcode))
+            validirano =true;
+        else
+            validirano =false;
+    /*-----------------------------------------------------------------------------------------------------------------*/
 
     if(validirano == true){
 
         document.getElementById('button_input').type = "button";/*Privremeno je stavljeno na button treba promijeniti na submit kansije*/
     }
+
+
+
 }
