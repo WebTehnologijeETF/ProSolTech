@@ -5,12 +5,7 @@ ajax.onreadystatechange = function(){
         //Anonimna funkcija
     if(ajax.readyState == 4 && ajax.status == 200){
 
-        document.getElementById("state").innerHTML = ajax.responseText;
-        document.getElementById("input_zipcode").innerHTML =ajax.responseText;
-
-
             var odziv =  JSON.parse(ajax.responseText);
-
             var zipcode = document.getElementById('input_zipcode');
             var zipcode_error = document.getElementById('zipcode_error');
 
@@ -45,7 +40,7 @@ ajax.onreadystatechange = function(){
 }
 
 function  ProvjeriGrad (Grad, zipcode) {
-    ajax.open("GET","http://zamger.etf.unsa.ba/wt/postanskiBroj.php?mjesto="+ Grad + "&postanskiBroj=" + zipcode, true);
+    ajax.open("GET","http://zamger.etf.unsa.ba/wt/postanskiBroj.php?mjesto="+Grad+ "&postanskiBroj="+zipcode, true);
     ajax.send();
 
 }

@@ -40,38 +40,53 @@
 
     <div id="content" >
 
-
+        <table id="lista_itema">
+        </table>
         <form  id="item_form"  name="item_entry" action="items.php"  method="post" >
 
-            Naziv<br>
-                <input id="input_item_name" type="text" name="if_name" placeholder="Ime proizvoda">
-                <span id="item_error" ></span><br>
-            Opis:<br>
-                <input id="input_item_description" type="text" name="if_description" placeholder="opis proizvoda">
-                <span id="description_error" ></span><br>
+            Akcija<br>
+            <select id="item_akcija" name="if_akcija" onchange="elementiForme()">
+                <option value = "dodavanje">dodavanje</option>
+                <option value = "promjena">promjena</option>
+                <option value = "brisanje">brisanje</option>
+            </select><br>
+            <span id="id_error" ></span><br>
+            Izaberi ID za izmjenu/brisanje:
+            <br>
+                <select id="id_change"  name="if_id_change"  ></select>
 
-            Input image:<br>
-                <input id="input_image" type="text" name="if_image" placeholder="URL slike">
-                <span id="input_image_error"></span><br>
+            <br>
+            <div id="forma_za_bazu">
+                Naziv<br>
+                    <input id="input_item_name" type="text" name="if_name" placeholder="Ime proizvoda">
+                    <span id="item_error" ></span><br>
+                Opis:<br>
+                    <input id="input_item_description" type="text" name="if_description" placeholder="opis proizvoda">
+                    <span id="description_error" ></span><br>
 
-            Input URL:<br>
-                <input id="input_URL" type="text" name="if_URL" placeholder="Unesi URL slike">
-                <span id="URL_error"></span><br>
+                Input image:<br>
+                    <input id="input_image" type="text" name="if_image" placeholder="URL slike">
+                    <span id="input_image_error"></span><br>
+
+                Input URL:<br>
+                    <input id="input_URL" type="text" name="if_URL" placeholder="Unesi URL slike">
+                    <span id="URL_error"></span><br>
 
 
-            Dostupnost:<br>
-                <input id="input_availability" type="checkbox" name="if_availability" >
-                <span id="availability_error"></span><br>
-            Kolicina:<br>
+                Dostupnost:<br>
+                    <input id="input_availability" type="checkbox" name="if_availability" >
+                    <span id="availability_error"></span><br>
+                Kolicina:<br>
 
-                <input id="input_quantity" type="number" name="if_quantity" >
-                <span id="quantity_error"></span><br>
-            Price:<br>
-                <input id="input_price" type="text" name="if_price" placeholder="Unesi cijenu">
-                <span id="price_error"></span><br>
-
-            <input id="button_input" onclick ="validateForm()" type="button" value="Send" >
+                    <input id="input_quantity" type="number" name="if_quantity" >
+                    <span id="quantity_error"></span><br>
+                Price:<br>
+                    <input id="input_price" type="text" name="if_price" placeholder="Unesi cijenu">
+                    <span id="price_error"></span><br>
+            </div>
+            <input id="button_input" onclick ="global()" type="button" value="Send" >
             <input id="button_clear" onclick ="formReset()" type="reset" value="Clear">
+
         </form>
 
 
@@ -98,6 +113,8 @@
 </footer>
     <script src="JavaScript/menu.js"></script>
     <script src="JavaScript/otvaranjePodstranice.js"></script>
-   <!-- <script src="JavaScript/unesiUBazu.js"></script> -->
+    <script src="JavaScript/unosItemaUBazu.js"></script>
+    <script src="JavaScript/formReset.js"></script>
+
 </body>
 </html>

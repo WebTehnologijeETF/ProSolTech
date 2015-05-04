@@ -225,23 +225,28 @@ div#Location_2{
 #input_name{
     width:400px;
     height:25px;
+    border-radius: 5px;
 }
 #input_city{
     height:25px;
     width:400px;
+    border-radius: 5px;
 }
 #input_zipcode{
     height:25px;
     width:400px;
+    border-radius: 5px;
 }
 #input_email{
 
     width:400px;
     height:25px;
+    border-radius: 5px;
 }
 #message_text_area{
     width:400px;
     height:130px;
+    border-radius: 5px;
 }
 #button_input{
     height:25px;
@@ -327,6 +332,7 @@ div#firme_saradnice {
     top:650px;
     font-size: 18px;
     height:20px;
+    border-radius: 5px;
 }
 #mail_error {
     background-color: red;
@@ -338,6 +344,7 @@ div#firme_saradnice {
     top:800px;
     font-size: 18px;
     height:20px;
+    border-radius: 5px;
 }
 #zipcode_error{
 
@@ -350,7 +357,7 @@ div#firme_saradnice {
     top:750px;
     font-size: 18px;
     height:40px;
-
+    border-radius: 5px;
 }
 #message_error {
     background-color: red;
@@ -362,6 +369,7 @@ div#firme_saradnice {
     top:850px;
     font-size: 18px;
     height:20px;
+    border-radius: 5px;
 }
 img#checked {
      display:none;
@@ -458,23 +466,36 @@ img#unchecked4{
     padding:10px;
     font-size: 20px;
     width:420px;
-    height:430px;
+    height:450px;
     top: 40px;
     margin-left:auto;
     margin-right:auto;
 
 }
+#id_change{
+    width:400px;
+    height:25px;
+    border-radius: 5px;
+}
+#item_akcija{
+    width:400px;
+    height:25px;
+    border-radius: 5px;
+}
 #input_item_name{
     width:400px;
     height:25px;
+    border-radius: 5px;
 }
 #input_item_description{
     width:400px;
     height:25px;
+    border-radius: 5px;
  }
 #input_image{
     width:400px;
     height:25px;
+    border-radius: 5px;
 }
 #input_URL{
     width:400px;
@@ -483,12 +504,15 @@ img#unchecked4{
 #input_availability{
     width:400px;
     height:25px;
+    border-radius: 5px;
 }
 #input_quantity{
     width:400px;
     height:25px;
+    border-radius: 5px;
 }
 #input_price{
     width:400px;
     height:25px;
+    border-radius: 5px;
 }
