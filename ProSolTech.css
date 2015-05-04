@@ -482,6 +482,11 @@ img#unchecked4{
     height:25px;
     border-radius: 5px;
 }
+#item_error{
+    width:400px;
+    height:25px;
+    border-radius: 5px;
+}
 #input_item_name{
     width:400px;
     height:25px;

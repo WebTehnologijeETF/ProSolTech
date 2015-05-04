@@ -11,8 +11,9 @@ function formResetItem(){
     var dostupnost =message_error = document.getElementById('input_availability');
     var kolicina= message = document.getElementById('input_quantity');
     var cijena = document.getElementById('input_price');
+    var ime_error_input = document.getElementById("item_error");
 
-
+    ime_error_input.style.display ="none";
     naziv.style.backgroundColor ="white";
 
     opis.style.backgroundColor ="white";
@@ -23,8 +24,5 @@ function formResetItem(){
     dostupnost.style.backgroundColor ="white";
     kolicina.style.backgroundColor ="white";
     cijena.style.backgroundColor ="white";
-
-
-
 
 }

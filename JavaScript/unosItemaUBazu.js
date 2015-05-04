@@ -47,7 +47,6 @@ function  unesiUBazu (){
 
     var ajax = new XMLHttpRequest();
     var akcija = document.getElementById('item_akcija').value;
-    alert(akcija);
     var proizvod ={
         /* unos svih potrebnih informacija vezanih za proizvod iz forme*/
         naziv: document.getElementById('input_item_name').value,
@@ -59,6 +58,15 @@ function  unesiUBazu (){
         cijena: parseFloat(document.getElementById('input_price').value)
 
     }
+    var naziv_itema = document.getElementById("input_item_name").value;
+    if (naziv_itema == "") {
+        ime_error= document.getElementById("item_error");
+        ime_error.style.display="block";
+        ime_error.style.background="red";
+        ime_error.innerHTML = "Niste unijeli naziv itema!";
+        return;
+    }
+
     ajax.onreadystatechange = function() {
 
         if (ajax.readyState == 4 && ajax.status == 200){
@@ -150,7 +158,7 @@ function modifikujUBazi(){
 
         if (modifikacija.readyState == 4 && modifikacija.status == 404){
 
-            document.write("Greska:nije obrisan proizvod");
+            document.write("Greska:nije modifikovan proizvod");
         }
 
     }
