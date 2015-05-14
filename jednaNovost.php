@@ -107,7 +107,8 @@
 <footer id="Copy">
     Copyright &copy; Edin Strojil 2014/2015.
 </footer>
-<script src="JavaScript/otvaranjePodstranice.js"></script>
+
 <script src="JavaScript/popuniVijest.js"></script>
+<script src="JavaScript/otvaranjePodstranice.js"></script>
 </body>
 </html>

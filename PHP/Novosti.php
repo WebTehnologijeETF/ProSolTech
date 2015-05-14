@@ -8,7 +8,6 @@ for( $j=2; $j< count($dir); $j++) {
 
    $novosti= file("PHP/novosti/".$dir[$j]);
 
-    /*$novosti = file("PHP/novosti/testNovost.txt");*/
 
     for ($i = 0; $i < count($novosti); $i++) {
 
