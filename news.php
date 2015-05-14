@@ -15,7 +15,7 @@
 
             <li class = "lista_u_headeru"><a onclick ="otvori_stranicu('index.html')">NASLOVNA</a></li> <!-- ovo treba odraditi tj povezati linkove kasnije na moje stranice -->
             <li class = "lista_u_headeru"><a onclick =" otvori_stranicu('about_us.html')">O NAMA</a></li>
-            <li class = "lista_u_headeru"><a onclick ="otvori_stranicu('news.php')" >NOVOSTI</a></li>
+            <li class = "lista_u_headeru"><a onclick ="otvori_stranicu('news.php')">NOVOSTI</a></li>
             <li id="meni" class = "lista_u_headeru" onmouseover="showMenu()" onmouseout="hideMenu()" ><a onclick ="otvori_stranicu('catalogue.html')">KATALOG</a>
                 <ul id = "katalog_podmeni">
                     <li class = "test"><a onclick ="otvori_stranicu('index.html')">Godina 2009</a> </li>
@@ -30,27 +30,27 @@
         </ul>
         <div id="header_Underline"></div>
     </header>
-    <main>
+</div>
+<main>
+    <div id="banner">
+        <img src="images/TheNews.jpg" alt="The news banner">
+    </div>
 
-        <div id="banner">
-            <img src="images/Computer_Circuit.jpg" alt="ProSolTech Banner" >
+    <div id="content_upperline"></div>
+
+    <div id="content" >
+        <div id="novosti">
+
+                <?php include ("PHP/Novosti.php");
+
+                ?>
+
         </div>
 
-        <div id="content_upperline"></div>
-
-        <div id="content">
-            <h2>Welcome to ProSolTech</h2>
-            <p>
-                ProSolTech Supply is proud to be Southern Colorado’s leading independent electrical distributor. With the largest staff, inventory and specialty services offered in our trading area, Blazer continues to be the first choice for the electrical contractor, industrial, institutional and government markets.
-                See why it pays to Buy Local.
-            </p>
-            <h2>Quality marks</h2>
-            <p>
-                ProSolTech has been a trusted name in the market for many years now. A name that is synonymous with exceptional quality, innovative product design and a series of strong brands.Be certain of the most comprehensive guarantees—Vasco brands offer 10-year warranties on all of its radiators. All products meet the requirements of the new, stricter European building regulations. Each and every one of them carries the CE quality label and is available with a Declaration of Performance (DoP)
-            </p>
         </div>
-        <div id="bottom_upperline"></div>
+    <div id="bottom_upperline"></div>
         <div id="bottom">
+
             <div id="facebook">
                 <img src = "images/facebook_ico.png" alt="Facebook Logo" >
             </div>
@@ -58,12 +58,15 @@
                 <img src = "images/twitter_ico.png" alt="Twitter Logo">
             </div>
         </div>
-        <div id="bottom_underline"></div>
-    </main>
-    <footer id="Copy">
-        Copyright &copy; Edin Strojil 2014/2015.
-    </footer>
-    <script src="JavaScript/otvaranjePodstranice.js"></script>
-</div>
+
+    <div id="bottom_underline"></div>
+
+</main>
+
+<footer id="Copy">
+    Copyright &copy; Edin Strojil 2014/2015.
+</footer>
+<script src="JavaScript/otvaranjePodstranice.js"></script>
+
 </body>
 </html>

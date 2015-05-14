@@ -75,7 +75,18 @@ div#content {
     width: 70%;
 }
 /*--------------------------------------------------------------*/
+/*--------------------Nove novosti preko PHPa------------------*/
 
+.prikaz_novost {
+    font-size: 25px;
+    margin-top: 40px;
+
+}
+
+
+
+
+/*-------------------------------------------------------------*/
 div#content > h2{
     padding:20px;
     text-align:center;
