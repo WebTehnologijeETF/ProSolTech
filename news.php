@@ -41,7 +41,7 @@
     <div id="content" >
         <div id="novosti">
 
-                <?php include ("PHP/Novosti.php");
+                <?php include("SkriptePHP/Novosti.php");
 
                 ?>
 

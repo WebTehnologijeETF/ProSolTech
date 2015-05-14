@@ -1,12 +1,12 @@
 <div class="prikaz_novost">
 <?php
 
-$dir = scandir('PHP/novosti');
+$dir = scandir('SkriptePHP/novosti');
 
 ?> <br><?php
 for( $j=2; $j< count($dir); $j++) {
 
-   $novosti= file("PHP/novosti/".$dir[$j]);
+   $novosti= file("SkriptePHP/novosti/".$dir[$j]);
 
 
     for ($i = 0; $i < count($novosti); $i++) {

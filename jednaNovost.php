@@ -43,7 +43,7 @@
 
 
             <?php
-            $novosti= file("PHP/novosti/".urlencode($_GET["sadrzajtxta"]));
+            $novosti= file("SkriptePHP/novosti/".urlencode($_GET["sadrzajtxta"]));
 
             for ($i = 0; $i < count($novosti); $i++) {
 

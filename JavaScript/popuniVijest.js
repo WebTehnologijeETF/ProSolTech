@@ -21,6 +21,6 @@ function popuni_vijesti (input) {
 
     }
 
-    vijest.open("GET", "PHP/jednaNovost.php?sadrzajtxta="+input, true);
+    vijest.open("GET", "SkriptePHP/jednaNovost.php?sadrzajtxta="+input, true);
     vijest.send();
 }
