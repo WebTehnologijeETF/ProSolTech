@@ -1,59 +1,1 @@
-<div class="prikaz_novost">
-<?php
-
-$dir = scandir('SkriptePHP/novosti');
-
-?> <br><?php
-for( $j=2; $j< count($dir); $j++) {
-
-   $novosti= file("SkriptePHP/novosti/".$dir[$j]);
-
-
-    for ($i = 0; $i < count($novosti); $i++) {
-
-        if ($i == 0) {
-            echo htmlentities($novosti[$i]);
-            ?><br><?php
-        }
-        else if ($i == 1) {
-            echo htmlentities($novosti[$i]);
-            ?><br><?php
-        }
-        else if ($i == 2) {
-            echo htmlentities($novosti[$i]);
-            ?> <br><?php
-
-        } /*slika*/
-        else if ($i == 3) {
-            if ($novosti[$i] == "\r\n") {
-                ?><br><?php
-            }
-            else {
-                ?><img src="<?php echo htmlentities($novosti[$i])?>" width="200"  > <?php
-                ?> <br><?php
-                    }
-            }
-        else {
-
-                /*usao u recenicu nekog rednog broja i provjerava da li ona ima samo -- sto oznacava detaljnije link*/
-
-                if( $novosti[$i]=="--\r\n") {
-
-                    ?><a href="jednaNovost.php?sadrzajtxta=<?=urlencode($dir[$j])?>"> [detaljnije]  </a><?php
-                    break;
-                }
-                else{
-                    echo $novosti[$i];
-                    continue;
-                }
-
-
-            /*Sada prolazimo kroz preostali string novosti karakter po karakter dok ne dodjemo do -- a zatim sve stavljamo u <a> tag sa linkom za opsirnije*/
-
-        }
-
-    }?> <br><br><br><?php
-
-}/*Zatvaramo dir for petlju*/
-?>
-</div>
+<div class="prikaz_novost"><?php                $veza_s_bazom = new PDO("mysql:dbname=prosoltechdatabase;host=localhost;charset=utf8", "Strojki", "semsudin123");                $veza_s_bazom->exec("set names utf8");                $rezultat = $veza_s_bazom->query("SELECT ID, UNIX_TIMESTAMP(vrijeme) as vrijeme2, autor ,naslov,URL, tekst,detaljnijiTekst                                          From novost                                          Order by vrijeme desc");            if (!$rezultat) {                $greska = $veza_s_bazom->errorInfo();                print "SQL greška: ".$greska[2];                exit();            }            foreach ($rezultat as $vijest) {                $broj_komentara = $veza_s_bazom->query("SELECT count(*)                                                      From novost n, komentar k                                                      where n.id=k.novost_id and k.novost_id=".$vijest['ID']);                $broj_komentara =$broj_komentara->fetchColumn();                 if($vijest['detaljnijiTekst']!=NULL){                    if($vijest['URL']!=NULL) {                        print  '<div id="vijest_linija"></div><br><br>' . '<small>' . date("d.m.Y. (h:i)", $vijest['vrijeme2']) . '</small>' . " " . '<br>' . '<p>' . $vijest['autor'] . '</p>' . '<h1>' . $vijest['naslov'] . '</h1>' . " " . '<img src=' . $vijest["URL"] . ' width="200"  > <br>' . " " . '<p>' . $vijest['tekst'] . '</p><br><a id="detaljnije_button" href="jednaNovost.php?sadrzajtxta=' . urlencode($vijest['ID']) . '"> [detaljnije]</a><a id="komentar_button" href="jednaNovost.php?sadrzajtxta=' . urlencode($vijest['ID']) . '"> [komentari('.$broj_komentara.')]</a><br>';                    }                    else                        print '<div id="vijest_linija"></div><br><br>'.'<small>'.date("d.m.Y. (h:i)", $vijest['vrijeme2']).'</small>'." ".'<br>'.'<p>'.$vijest['autor'].'</p>'.'<h1>'.$vijest['naslov'].'</h1>'." ".'<p>'.$vijest['tekst'].'</p><br><a id="detaljnije_button" href="jednaNovost.php?sadrzajtxta='.urlencode($vijest['ID']).'"> [detaljnije]</a><a id="komentar_button" href="jednaNovost.php?sadrzajtxta=' . urlencode($vijest['ID']) . '"> [komentari('.$broj_komentara.')]</a><br>';                }                else{                    if($vijest['URL']!=NULL)                         print '<div id="vijest_linija"></div><br><br>'.'<small>'.date("d.m.Y. (h:i)", $vijest['vrijeme2']).'</small>'." ".'<br>'.'<p>'.$vijest['autor'].'</p>'.'<h1>'.$vijest['naslov'].'</h1>'." ".'<img src='.$vijest["URL"].' width="200"  > <br>'." ".'<p>'.$vijest['tekst'].'</p><a id="komentar_button" href="jednaNovost.php?sadrzajtxta=' . urlencode($vijest['ID']) . '"> [komentari('.$broj_komentara.')]</a><br><br>';                    else                        print '<div id="vijest_linija"></div><br><br>'.'<small>'.date("d.m.Y. (h:i)", $vijest['vrijeme2']).'</small>'." ".'<br>'.'<p>'.$vijest['autor'].'</p>'.'<h1>'.$vijest['naslov'].'</h1>'." ".'<br>'." ".'<p>'.$vijest['tekst'].'</p><a id="komentar_button" href="jednaNovost.php?sadrzajtxta=' . urlencode($vijest['ID']) . '"> [komentari('.$broj_komentara.')]</a><br><br>';                }            }    ?></div>
