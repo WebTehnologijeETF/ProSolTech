@@ -2,10 +2,13 @@
     padding:0px;
     margin:0px;
 }
-body{
-}
 #container{
     background-color: cadetblue;
+}
+/*ovaj dio za html jos testiram nesto mi se white space pojavljuje*/
+html{
+    height:100%;
+    width:100%;
 }
 header{
     height: 100px;
@@ -32,13 +35,21 @@ div#banner{
 div#content {
     width: 100%;
     position: relative;
-    top:500px;
+    top:600px;
     background-color:dodgerblue;
     height:1400px;
     color:white;
-
-
 }
+
+
+#content_about_us {
+    width: 100%;
+    position: relative;
+    top:600px;
+    background-color:dodgerblue;
+    height:3200px;
+    color:white;}
+
 /*Sljedeca 4 bloka su zaduzena za tekst i poravnanje novosti*/
 #novosti{
     padding:100px;
@@ -49,6 +60,7 @@ div#content {
     overflow: auto;
     border:4px solid white;
 }
+
 .novost{
     padding:10px;
     width:90%;
@@ -72,21 +84,10 @@ div#content {
 }
 .tekst {
     float:left;
-    width: 70%;
+    width: 50%;
 }
 /*--------------------------------------------------------------*/
-/*--------------------Nove novosti preko PHPa------------------*/
 
-.prikaz_novost {
-    font-size: 25px;
-    margin-top: 40px;
-
-}
-
-
-
-
-/*-------------------------------------------------------------*/
 div#content > h2{
     padding:20px;
     text-align:center;
@@ -103,7 +104,36 @@ div#content > p{
     font-size:22px;
 }
 
+div#content_about_us > h2{
+    padding:20px;
+    text-align:center;
+    font-size: 52px;
+    font-style: italic;
+}
+
+#content_about_us > p {
+    margin-left:auto;
+    margin-right: auto;
+    position:relative;
+    padding-top:50px;
+    width: 80%;
+    text-align: center;
+    font-size:22px;
+}
+
+#content_about_us > h3{
+
+    text-align:left;
+    font-size: 32px;
+    font-style: italic;
+    position:relative;
+    left:100px;
+    margin-left:auto;
+    margin-right: auto;
+}
+
 #Logo{
+    cursor:pointer;
     position:relative;
     top:20px;
     width:460px;
@@ -117,6 +147,7 @@ ul#lista_headera{
     padding: 5px;
 }
 header > ul > li >  a {
+    cursor: pointer;
     display: block;
     width: 100px;
     height: 32px;
@@ -126,6 +157,7 @@ header > ul > li >  a {
 }
 
 header > ul> li> a:hover{
+    cursor: pointer;
     color:white;
     background-color: dodgerblue;
 }
@@ -151,7 +183,7 @@ div#bottom {
     position: relative;
     width: 100%;
     height: 120px;
-    top:360px;
+    top:460px;
     background-color: whitesmoke;
 
 }
@@ -165,63 +197,67 @@ div#bottom > div{
 }
 footer#Copy{
     position: relative;
+    margin-left:auto;
+    margin-right:auto;
     background-color: dodgerblue;
-    text-align: center;
-    top:360px;
+    text-align:center;
+    top:460px;
     color: white;
     font-size:20px;
 }
 
 div#bottom_upperline{
     position:relative;
-    top:360px;
+    top:460px;
     width:100%;
     height : 4px ;
     background-color: dodgerblue;
 }
 div#bottom_underline{
     position:relative;
-    top:360px;
+    top:460px;
     width:100%;
     height : 4px ;
     background-color: dodgerblue;
 }
-div#facebook > img {
-    height: 64px;
-    width:64px;
-}
-div#twitter > img {
-    height: 64px;
-    width:64px;
+div#facebook{
+    float:left;
 
+ }
+div#twitter {
+    float:left;
+
+}
+div#google_plus{
+    float:left;
+
+}
+
+div#follow_butons{
+    margin-right: auto;
+    margin-left: auto;
 }
 /*----------------------------------------------------------------------------------------------------------------------*/
 div#content_upperline{
     position:relative;
-    top:500px;
+    top:600px;
     width:100%;
     height: 4px;
     background-color: whitesmoke;
+}
+#mapa_prosoltech{
+    margin-left: 35%;
+
 }
 div#Location_1{
     padding:10px;
     font-size: 20px;
     float:left;
+    border-left: solid whitesmoke 4px;
     border-right: solid whitesmoke 4px;
     margin-left: 35%;
 }
-div#Location_2{
-    padding:10px;
-    font-size: 20px;
-    float:left;
-}
-#youtube_video{
-    padding:10px;
-    width:475px;
-    height:300px;
-    margin-left:auto;
-    margin-right:auto
-}
+
 
 #contact_form{
     padding:10px;
@@ -274,22 +310,6 @@ div#Location_2{
     color:dodgerblue;
 }
 
-div#video_more{
-    padding:10px;
-    width:500px;
-    height:100px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-div#audio{
-    padding:10px;
-    width:300px;
-    height:30px;
-    margin-right:auto;
-    margin-left: auto;
-
-}
 
 table, th, td {
 
@@ -327,11 +347,67 @@ div#firme_saradnice {
     color: white;
     left:200px;
     font-size: 30px;
-    list-style-image: url("http://www.autoliv.com/Style%20Library/Autoliv/Images/icon-red-bg-white-arrow-small.png");
+    list-style-image: url("images/blueDot.png");
+}
+
+div#lista_uslugaPST {
+
+    width:75%;
+    position:relative;
+    padding-top:20px;
+    color: white;
+    margin-left:auto;
+    margin-right: auto;
+    font-size: 22px;
+    list-style-image: url("images/blueDot.png");
+}
+
+div#lista_uslugaHWT {
+
+    width:75%;
+    position:relative;
+    padding-top:20px;
+    color: white;
+    margin-left:auto;
+    margin-right: auto;
+    font-size: 22px;
+    list-style-image: url("images/blueDot.png");
+}
+
+div#lista_uslugaLET {
+
+    width:75%;
+    position:relative;
+    padding-top:20px;
+    color: white;
+    margin-left:auto;
+    margin-right: auto;
+    font-size: 22px;
+    list-style-image: url("images/blueDot.png");
+}
+
+
+div#lista_uslugaTTE {
+
+    width:75%;
+    position:relative;
+    padding-top:20px;
+    color: white;
+    margin-left:auto;
+    margin-right: auto;
+    font-size: 22px;
+    list-style-image: url("images/blueDot.png");
 }
 /*----------------------------------------------CSS Za validaciju kontakt forme-----------------------------------*/
 /* napomena za sebe kasnije staviti na static ovo da se lijepo poslozi ispod inputa*/
+#kontakt_forma{
+    position:relative;
+    top:20px;
+    width:500px;
+    margin-left: auto;
+    margin-right: auto;
 
+}
 #ime_error {
 
     background-color: red;
@@ -439,21 +515,21 @@ img#unchecked4{
 }
 #katalog_podmeni > li {
 
-
+    cursor: pointer;
     background-color: whitesmoke;
     list-style-type: none;
     display: block;
 
 }
 #katalog_podmeni > li :hover {
-
+    cursor: pointer;
     background-color: dodgerblue;
     color:whitesmoke;
     list-style-type: none;
     display: block;
 }
 #katalog_podmeni > li> a {
-
+    cursor: pointer;
     padding-top:10px;
     height:32px;
     display: block;
@@ -462,7 +538,7 @@ img#unchecked4{
 
 }
 #katalog_podmeni > li> a :hover {
-
+    cursor: pointer;
     display: block;
     text-decoration:none;
     color: white;
@@ -531,47 +607,4 @@ img#unchecked4{
     width:400px;
     height:25px;
     border-radius: 5px;
-}
-
-/*linije razgranicenja izmedju vijesti*/
-div#vijest_linija {
-    width: 100%;
-    height: 20px;
-    background-color: yellow;
-    border-radius:5px;
-}
-div#komentar_linija {
-    width: 100%;
-    height: 20px;
-    background-color: whitesmoke;
-    border-radius:5px;
-}
-
-#komentar_form{
-    padding:10px;
-    font-size: 20px;
-    width:420px;
-    height:430px;
-    top: 40px;
-    margin-left:auto;
-    margin-right:auto;
-
-}
-#komentar_button{
-     border: solid whitesmoke 2px;
-     background-color: whitesmoke;
-     border-radius: 5px;
-     color:dodgerblue;
-     text-decoration: none;
-
- }
-
-#detaljnije_button{
-
-    border: solid whitesmoke 2px;
-    background-color: whitesmoke;
-    border-radius: 5px;
-    color:dodgerblue;
-    text-decoration: none;
-
 }

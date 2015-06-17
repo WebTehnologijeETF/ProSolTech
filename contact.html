@@ -9,26 +9,25 @@
 
 </head>
 <body>
-
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<script src="https://apis.google.com/js/platform.js" async defer></script>
 <div id = "container">
     <header>
-        <a onclick ="otvori_stranicu('index.html')"> <img id="Logo" src="PSTLogo.png" alt="ProSolTech Logo"></a>
+        <a href="index.html"> <img id="Logo" src="images/PSTLogo.png" alt="ProSolTech Logo"></a>
         <ul id =lista_headera>
 
-            <li class = "lista_u_headeru"><a onclick ="otvori_stranicu('index.html')">NASLOVNA</a></li> <!-- ovo treba odraditi tj povezati linkove kasnije na moje stranice -->
-            <li class = "lista_u_headeru"><a onclick =" otvori_stranicu('about_us.html')">O NAMA</a></li>
-            <li class = "lista_u_headeru"><a onclick ="otvori_stranicu('news.php')" >NOVOSTI</a></li>
-            <li id="meni" class = "lista_u_headeru" onmouseover="showMenu()" onmouseout="hideMenu()" ><a onclick ="otvori_stranicu('catalogue.html')">KATALOG</a>
-                <ul id = "katalog_podmeni">
-                    <li class = "test"><a onclick ="otvori_stranicu('index.html')">Godina 2009</a> </li>
-                    <li class = "test"><a onclick ="otvori_stranicu('index.html')">Godina 2010</a> </li>
-                    <li class = "test"><a onclick ="otvori_stranicu('index.html')">Godina 2011</a></li>
-                    <li class = "test"><a onclick ="otvori_stranicu('index.html')">Godina 2012</a></li>
-                    <li class= "test"><a onclick ="otvori_stranicu('noviKatalog.html')">novi item</a></li>
-                </ul>
-            </li>
-            <li class = "lista_u_headeru"><a onclick ="otvori_stranicu('contact.html')">KONTAKT</a></li>
-
+            <li class = "lista_u_headeru"><a href="index.html">NASLOVNA</a></li> <!-- ovo treba odraditi tj povezati linkove kasnije na moje stranice -->
+            <li class = "lista_u_headeru"><a href="about_us.html">O NAMA</a></li>
+            <li class = "lista_u_headeru"><a href="news.html" >NOVOSTI</a></li>
+            <li id="meni" class = "lista_u_headeru" onmouseover="showMenu()" onmouseout="hideMenu()" ><a href="catalogue.html">KATALOG</a></li>
+            <li class = "lista_u_headeru"><a href="contact.html">KONTAKT</a></li>
         </ul>
         <div id="header_Underline"></div>
     </header>
@@ -42,77 +41,64 @@
 
     <div id="content" >
 
-        <div id="youtube_video">
-            <iframe width="475" height="300" src="https://www.youtube.com/embed/hAjzvy94JsM" ></iframe>
-        </div>
-        <div id="video_more">
-            <details >
-                <summary>Details</summary>
-                <p> Clip from the movie "Big Nothing". Two guys working in a call center. The movie is called "Big Nothing".</p>
-                <p>It stars David Schwimmer and Simon Pegg. Check it out at <a href="http://www.imdb.com/title/tt0488085/"> http://www.imdb.com/title/tt0488085/</a> </p>
-            </details>
-        </div>
-
-        <div id="audio">
-            <audio controls>
-                <source src="images/audio.mp3" type="audio/mpeg">
-             </audio>
-        </div>
-
         <div id="Lcations">
             <div id="Location_1">
-                <p> Location : Sarajevo</p>
-                <p> Phone number : 033/231-441</p>
-                <p> Fax : 033/231-442</p>
-                <p> E-mail : prosoltech@info.ba</p>
-            </div>
-            <div id="Location_2">
-                <p> Location : Zenica </p>
-                <p> Phone number : 033/231-441</p>
-                <p> Fax : 033/ 231-442</p>
-                <p> E-mail : prosoltech@info.ba</p>
+                <p> Location : Ferhadija 27,
+                     71000 Sarajevo
+                    Bosna i Hercegovina
+                </p>
+                <p> Phone number : 033/830-205</p>
+                <p> Fax : 033/830-209</p>
+                <p> E-mail : info@prosoltech.ba</p>
             </div>
         </div>
-        <form name="kontakt_forma" id="contact_form" action="contact.php"  method="post" >
-            Your name<br>
+        <!--Geotag lokacije firme-->
+        <iframe id="mapa_prosoltech" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d719.2083084235206!2d18.42694360000001!3d43.859285099999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4758c8cf32c86f95%3A0xc0ccd759bee95a9c!2sFerhadija+27%2C+Sarajevo+71000!5e0!3m2!1sen!2sba!4v1433682161384" width="523" height="300" frameborder="0" style="border:0"></iframe><br><br>
+
+
+        <div id="kontakt_forma">
+            <form name="kontakt_forma" id="contact_form" action="contact.php"  method="post" >
+                Your name<br>
                 <input id="input_name" type="text" name="cf_name" placeholder="Ime">
-                    <img id="checked" alt ="checked" src="images/check_icon.png">
-                    <img id="unchecked" alt="unchecked" src="images/red-x.png">
+                <img id="checked" alt ="checked" src="images/check_icon.png">
+                <img id="unchecked" alt="unchecked" src="images/red-x.png">
                 <span id="ime_error" ></span><br>
 
-            Select Country (with states):          Select state/city:
+                Select Country (with states):          Select state/city:
 
-                    <select id="country" name ="country" ></select>
+                <select id="country" name ="country" ></select>
 
-                    <select name ="state" id ="state"></select>
-                    <script language="javascript">
-                        populateCountries("country", "state");
-                    </script><br>
+                <select name ="state" id ="state"></select>
+                <script language="javascript">
+                    populateCountries("country", "state");
+                </script><br>
 
 
-            Enter Zip Code:<br>
+                Enter Zip Code:<br>
                 <input id="input_zipcode" type="text" name="cf_zipcode" placeholder="Postanski broj">
                 <img id="checked4" alt ="checked" src="images/check_icon.png">
                 <img id="unchecked4" alt="unchecked" src="images/red-x.png">
                 <span id="zipcode_error"></span><br>
 
-            Your e-mail<br>
+                Your e-mail<br>
 
                 <input id="input_email" type="email" name="cf_email">
                 <img id="checked2" alt ="checked" src="images/check_icon.png">
                 <img id="unchecked2" alt="unchecked" src="images/red-x.png">
                 <span id="mail_error"></span><br>
 
-            Message<br>
+                Message<br>
 
                 <img id="checked3" alt ="checked" src="images/check_icon.png">
                 <img id="unchecked3" alt="unchecked" src="images/red-x.png">
                 <textarea id="message_text_area" name="cf_message" placeholder="Vasa poruka" ></textarea>
                 <span id="message_error"></span><br>
 
-                    <input id="button_input" onclick ="validateForm()" type="button" value="Send" >
-                    <input id="button_clear" onclick ="formReset()" type="reset" value="Clear">
-        </form>
+                <input id="button_input" onclick ="validateForm()" type="button" value="Send" >
+                <input id="button_clear" onclick ="formReset()" type="reset" value="Clear">
+            </form>
+        </div>
+
     </div>
 
 
@@ -120,10 +106,14 @@
     <div id="bottom">
 
         <div id="facebook">
-            <img src = "images/facebook_ico.png" alt="Facebook Logo" >
+            <div id="fb-like" class="fb-like" data-href="https://www.facebook.com/hamo.hapic.397?fref=ts" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
         </div>
         <div id="twitter">
-            <img src = "images/twitter_ico.png" alt="Twitter Logo">
+            <a href="https://twitter.com/EStrojil" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Follow @EStrojil</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        </div>
+        <div id="google_plus">
+            <div class="g-follow" data-annotation="none" data-height="20" data-href="//plus.google.com/u/0/106277774256317858077" data-rel="author"></div>
         </div>
     </div>
     <div id="bottom_underline"></div>

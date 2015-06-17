@@ -7,26 +7,27 @@
     <script src="JavaScript/menu.js"></script>
 </head>
     <body>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
 
         <div id = "container">
             <header>
-                <a onclick ="otvori_stranicu('index.html')"> <img id="Logo" src="PSTLogo.png" alt="ProSolTech Logo"></a>
+                <a href="index.html"> <img id="Logo" src="images/PSTLogo.png" alt="ProSolTech Logo"></a>
                 <ul id =lista_headera>
 
-                    <li class = "lista_u_headeru"><a onclick ="otvori_stranicu('index.html')">NASLOVNA</a></li> <!-- ovo treba odraditi tj povezati linkove kasnije na moje stranice -->
-                    <li class = "lista_u_headeru"><a onclick =" otvori_stranicu('about_us.html')">O NAMA</a></li>
-                    <li class = "lista_u_headeru"><a onclick ="otvori_stranicu('news.php')" >NOVOSTI</a></li>
-                    <li id="meni" class = "lista_u_headeru" onmouseover="showMenu()" onmouseout="hideMenu()" ><a onclick ="otvori_stranicu('catalogue.html')">KATALOG</a>
-                        <ul id = "katalog_podmeni">
-                            <li class = "test"><a onclick ="otvori_stranicu('index.html')">Godina 2009</a> </li>
-                            <li class = "test"><a onclick ="otvori_stranicu('index.html')">Godina 2010</a> </li>
-                            <li class = "test"><a onclick ="otvori_stranicu('index.html')">Godina 2011</a></li>
-                            <li class = "test"><a onclick ="otvori_stranicu('index.html')">Godina 2012</a></li>
-                            <li class= "test"><a onclick ="otvori_stranicu('noviKatalog.html')">novi item</a></li>
-                        </ul>
-                    </li>
-                    <li class = "lista_u_headeru"><a onclick ="otvori_stranicu('contact.html')">KONTAKT</a></li>
-
+                    <li class = "lista_u_headeru"><a href="index.html">NASLOVNA</a></li> <!-- ovo treba odraditi tj povezati linkove kasnije na moje stranice -->
+                    <li class = "lista_u_headeru"><a href="about_us.html">O NAMA</a></li>
+                    <li class = "lista_u_headeru"><a href="news.html" >NOVOSTI</a></li>
+                    <li id="meni" class = "lista_u_headeru" onmouseover="showMenu()" onmouseout="hideMenu()" ><a href="catalogue.html">KATALOG</a></li>
+                    <li class = "lista_u_headeru"><a href="contact.html">KONTAKT</a></li>
                 </ul>
                 <div id="header_Underline"></div>
             </header>
@@ -38,36 +39,101 @@
 
         <div id="content_upperline"></div>
 
-        <div id="content" >
+        <div id="content_about_us" >
 
-                <h2>Our History </h2>
-                    <p>Blazer Electric Supply was originally formed in 1984 by Fred, Mike, and Steve Blazer. The company grew from a small start-up in Colorado Springs to the largest electrical distributor in Southern Colorado in just 15 years with locations in Colorado Springs, Pueblo, Canon City and Castle Rock. The company was then sold in 1999.
+                <h2>History</h2>
+                    <p>ProSolTech d.o.o. je jedna od najperspektivnijih preduzeća u oblasti razvoja informatičkih tehnologija, elektronike, hardvera te testiranju „state of the art“ tehnologija. ProSolTech je koncipiran oko četiri razvojna sektora hardver, layout, softver i testing koji se međusobno nadopunjavaju.</p>
+                <h2>Zasto ProSolTech</h2>
+                     <p>
+                         Karakteristika koja nas obilježava i izdvaja od mnogobrojne i kvalitetne konkurencija kako u našoj zemlji tako i u inostranstvu je veoma tijesan odnos između kolega u preduzeću, međusobno poštovanje, pomaganje i radna atmosfera kakvoj se samo najveće svjetske kompanije mogu pohvaliti. Mi ne gradimo samo profesionalni odnos prema kolegama mi gradimo i lični odnos gdje se svačije mišljenje i ideje uvažavaju, a problemi rješavaju zajedno. Konstantno ulažemo u usavršavanje naših kolega u raznim poljima informatičkih tehnologija, elektronike, dizajniranju layouta boardova, itd. kako unutar naše kuće tako i kod naših inostranih partnera. Također dijeljenje znanja između pojedinih sektora firme omogućava kolegama da steknu novo iskustvo i uvid u nove tehnologije za koje prije nisu čuli. Sav ovaj proces ima samo jedan cilj da razvijemo najbolje inženjere koji će izdignuti ProSolTech u rang najboljih svjetskih preduzeća.
+                         Mi volimo reći da radimo po njemačkim principima, uslovima rada, zakonima i disciplini začinjeno bosanskim duhom.
+                         Na temelju kako iskustva tako i brojnih uspješno završenih projekata, u mogućnosti smo Vam ponuditi uslugu razvoja elektroničkih uređaja koja uključuje sljedeće:
+                        <div id="lista_uslugaPST" >
+                            <div>
+                                <p>Na temelju kako iskustva tako i brojnih uspješno završenih projekata, u mogućnosti smo Vam ponuditi uslugu razvoja elektroničkih uređaja koja uključuje sljedeće:</p><br>
+                                <ul>
+                                    <li><p>Savjetovanje, projektovanje i razvoj elektroničkih uređaja</p></li>
+                                    <li><p>Razvoj hardwarea</p></li>
+                                    <li><p>Razvoj softwarea</p></li>
+                                    <li><p>Dizajn PCB-a</p></li>
+                                    <li><p>Mjerenja i ispitivanja projektiranih uređaja</p></li>
+                                    <li><p>Dokumentiranje proizvoda i proizvodnog procesa</p></li>
 
-                   Recognizing the void in the marketplace of a locally-owned electrical distributor, Mike and Steve then rebuilt a new company in 2009 with the help of 30 former employees.  In less than 5 years, Blazer Electric Supply once again established itself as the largest electrical distributor in Southern Colorado. Our customers can access 4 million dollars in inventory under 80k square feet of warehouse, serviced by over 75 of the most customer service oriented associates in our industry. Blazer is back.</p>
-                <h2>Our Independence</h2>
-                     <p>Blazer Electric Supply is Southern Colorado’s only locally owned independent distributor. That independence translates into a distributor that is flexible, progressive and responsive, with a single objective of offering the highest levels of customer service to those that we serve. We value our employee, supplier and customer relationships and are committed to supporting the communities within which we live.</p>
-                <h2>Our Success</h2>
-                    <p>Over the years Blazer Electric Supply has been recognized for numerous accomplishments, having received the Better Business Bureau’s “Excellence in Customer Service” Award, the Chamber of Commerce “Small Business of the Year” Award and most recently the IMARK “Distributor of the Year” Award for 2011, 2012, and 2013. But our true measure of success comes from our customers, as demonstrated in a recently completed market survey by Farmington Consulting Group, a nationally recognized customer satisfaction survey firm, in which Blazer Electric Supply ranked 2nd of over 50 distributors surveyed to date.</p>
-                <h2>Our Commitment</h2>
-                    <p>
-                        If you’re looking for a distributor that has the History to give you the assurance of doing business with a credible and reliable supplier, the Independence to be able to respond to each customer’s individual needs and the proven track record of Success to meet the requirements of not only today’s, but tomorrow’s business dynamics …….. Welcome to Blazer Electric Supply.</p>
-         </div>
+                                </ul>
+                            </div>
+
+                         </div>
+
+                <h2>ProSolTech timovi za razvoj</h2>
+                    <h2>Hardware Team</h2>
+                            <p>Tim od pet talentiranih inžinjera elektrotehnike koje objedinjuje stalna potraga za sljedećim velikim izazovom. Lajtmotiv tima temelji se na činjenici da se stalnim radom može steći nevjerovatno mnogo znanja te da žele učiti dalje. Žele iskoristiti sopstveno iskustvo u radu sa različitim arhitekturama (Freescale PowerPC, Atmel AVR...) kako bi postavili prava pitanja te ponudili prava rješenja za naše klijente (od izbora komponenti, PCB dizajna, te izrade i testiranja prototipa). Stručnost Harware tima u kombinaciji sa inovativnim idejama i dobrim poznavanjem najnovijih uređaja i metoda, su garancija našeg zajedničkog uspjeha na tržištu.</p>
+                            <div id="lista_uslugaHWT" >
+                                <div>
+                                    <p>Naš opseg djelatnosti obuhvata:</p><br>
+                                    <ul>
+                                        <li><p>Dizajn hardware-skih struktura (izbor odgovarajućih uP arhiektura, dizajn real-time sistema baziranog na odabranoj arhitekturi, izrada prototipa i dokumentacije)</p></li>
+                                        <li><p>Ubrzan proces dizajna robusnih prototipa korištenjem modularnih razvojnih sistema</p></li>
+                                        <li><p>Integracija analognih i digitalnih senzora u sisteme (kamere, temperaturni senzori, senzori udaljenosti...)</p></li>
+                                        <li><p>Evaluacija opsega testnih zahtjeva i izrada adekvatnog modela rješenja</p></li>
+                                        <li><p>Mjerenja i ispitivanja projektiranih uređaja</p></li>
+                                        <li><p>Dokumentiranje proizvoda i proizvodnog procesa</p></li>
+                                    </ul>
+                                </div>
+                                </div>
+                    <h2>Software Team</h2>
+                            <p>ProSolTech posjeduje mlad, talentovan i ambiciozan Software Team koji veoma profesionalno i odgovorno pristupa realiziranju zahtjeva klijenata. Tim broji 5 osoba sa zvanjem Master Elektrotehnike, smjer Automatika i Elektronika Elektrotehničkoga Fakulteta Univerziteta u Sarajevu. Kroz mnogobrojne obuke kod poslovnih partnera, tim je proširio svoja znanja iz domena funkcionalne sigurnosti, softverskih arhitektura, testnih koncepata i tehnika kao i sveukupni proces razvoja softvera za embedded sisteme. Dizajn sigurnih softverskih rješenja vrši se u skladu sa IEC standardima 61508 i 61131. Tim sarađuje sa vodećim kompanijama iz oblasti sigurnih sistema i trenutno radi na dizajnu i testiranju operativnih sistema i namjenskih drivera za sigurne embedded sisteme/proizvode, kao i pisanju i kodiranju testnih specifikacija. Uz navedeno, tim provodi i statičku i dinamičku analizu koda razvijenih softverskih rješenja.</p>
+
+                                <h2>Layout-Team</h2><br>
+                                <p>Layout-Team se sastoji od mladih stručnih ljudi, čiji je centralni zadatak dizajniranje elektronskih ploča prema već postojećim elektronskim shemama. Dizajn započinjemo od samih dimenzija ploče pa do kreiranja finalnih datoteka potrebnih za proizvodnju elektronske ploče tzv. gerber datoteke. Tim ima iskustva sa dizajniranjem višeslojnih ploča, koje sadrže i preko 10 slojeva, te preko 2000 komponenti. </p>
+                                <div id="lista_uslugaLET" >
+                                    <div>
+                                        <p>Važno je napomenuti da radimo sa jednostrano i dvostrano opremljenim pločama, te da prilikom dizajna posebnu pažnju posvećujemo na</p><br>
+                                        <ul>
+                                            <li><p>Kritične signale (signali PCI sabirnice, A-D signali memorije i drugi osjetljivi signali)</p></li>
+                                            <li><p>Temperaturnu disipaciju</p></li>
+                                            <li><p>Elektromagnetno zračenje </p></li>
+                                            <li><p>Optimalnom rasporedu komponenti</p></li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                                 <p>Radimo sa modernom hardverskom/softwerskom opremom i težimo ka konstantnom izučavanju i prilagođavanju novim tehnologijama na području PCB dizajna. Članovi našeg tima kontinuirano usavršavaju svoje znanje kako bi bili u korak sa najvišim standarima u ovoj oblasti.</p><br>
+                    <h2>Test-Team</h2><br>
+                            <p>Testing Team je tim od dvanaest mladih i perspektivnih inžinjera koji su svoje obrazovanje stekli na različitim fakultetima tehničkog usmjerenja u Bosni i Hercegovini. Svi članovi našeg tima su prošli detaljne obuke od strane naših poslovnih partnera, što je rezultiralo da Testing Team danas čini provjereno kvalitetan i edukovan kadar na polju sigurnosnih sistema. Multidisciplinarnost naših članova omogućava sagledavanje problema iz različitih uglova sto doprinosi kvalitetnijem rješavanju svakog izazova na koji naiđemo.Naši inžinjeri svakodnevno kreiraju različita softverska i hardverska rješenja s ciljem pregleda i evaluacije kvaliteta PLC uređaja. </p>
+                                <div id="lista_uslugaTTE" >
+                                    <div>
+                                        <p>Neka od naših osnovnih zaduženja su:</p><br>
+                                        <ul>
+                                            <li><p>Izrada testnih specifikacija i testnih izvještaja</p></li>
+                                            <li><p>Izvođenje unaprijed definisanih testova na različitim sistemima i okruženjima;</p></li>
+                                            <li><p>Izrada raznih programa kao i funkcijskih blokova za naše poslovne partnere primjenom standarda IEC 61508 i IEC 61131</p></li>
+                                            <li><p>Identificiranje i evidentiranje svih mogućih nedostataka na sistemu</p></li>
+                                            <li><p>Konstantno usavršavanje na poljima programiranja softvera i hardvera</p></li>
+                                            <li><p>Dokumentiranje proizvoda i proizvodnog procesa</p></li>
+                                        </ul>
+                                    </div>
+                                </div>
+        </div>
 
         <div id="bottom_upperline"></div>
         <div id="bottom">
 
-                <div id="facebook">
-                    <img src = "images/facebook_ico.png" alt="Facebook Logo" >
-                </div>
-                <div id="twitter">
-                    <img src = "images/twitter_ico.png" alt="Twitter Logo">
-                </div>
+            <div id="facebook">
+                <div id="fb-like" class="fb-like" data-href="https://www.facebook.com/hamo.hapic.397?fref=ts" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
+            </div>
+            <div id="twitter">
+                <a href="https://twitter.com/EStrojil" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Follow @EStrojil</a>
+                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+            </div>
+            <div id="google_plus">
+                <div class="g-follow" data-annotation="none" data-height="20" data-href="//plus.google.com/u/0/106277774256317858077" data-rel="author"></div>
+            </div>
         </div>
 
         <div id="bottom_underline"></div>
 
     </main>
-
+   
         <footer id="Copy">
             Copyright &copy; Edin Strojil 2014/2015.
         </footer>
